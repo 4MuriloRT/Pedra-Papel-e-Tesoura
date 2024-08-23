@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player{
+    grid-area: player;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+}
+
+.robo{
+    grid-area: robo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .6rem;
+}
+
+.resultado-footer{
+    grid-area: resultado;
+}
+
+.screen{
+    display: grid;
+    border: 1rem solid black;
+    gap: 4rem;
+    grid-template-areas: 
+    ". . . ."
+    ". player robo ."
+    ". resultado resultado ."
+    ". . . .";
+}
+
+#icon{
+    width: 15rem;
+}
+
+#op{
+    width: 5rem;
+    height: 7rem;
+    cursor: pointer;
+}
+
+#op:hover{
+    border: .1rem solid black;
+    padding: .1rem;
+}
+
+.pedra-r, .tesoura-r, .papel-r{
+    display: none;
+}
+
+#player-pontos, #robo-pontos{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+
+.resultado{
+    text-align: center;
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.options{
+    border: .2rem solid black;
+    padding: .4rem;
+}
+
+.options-robo{
+    border: .2rem solid rgb(255, 0, 0);
+    padding: .4rem;
+}
